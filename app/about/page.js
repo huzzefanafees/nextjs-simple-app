@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import styles from './page.module.css'
 import Link from 'next/link'
+import React from 'react'
+import styles from '../page.module.css'
 
-export default function Home() {
+const About = () => {
   return (
     <>
       <nav className={styles.mainnav}>
@@ -13,17 +13,13 @@ export default function Home() {
           <li><Link className={styles.link} href={"/contact"}>Contact</Link></li>
         </ul>
       </nav>
-      <main className={styles.main}>
+      <div className={styles.main}>
         <div className={styles.head}>
-          <h1>My Blog</h1>
+          <h1>About</h1>
         </div>
-        <div className={styles.blogs}>
-          <h3>
-            How to learn javascript in 2023?
-          </h3>
-          <p>Javascript is the language used to design web pages.</p>
-        </div>
-      </main>
+      </div>
     </>
   )
 }
+
+export default About
