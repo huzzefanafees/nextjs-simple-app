@@ -10,7 +10,7 @@ export default function Home() {
         <h3>
           How to learn javascript in 2023?
         </h3>
-        <p>Javascript is the language used to design web pages.</p>
+        <p>Javascript is a programming language.</p>
       </div>
     </main>
   )
