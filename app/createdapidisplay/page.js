@@ -1,3 +1,4 @@
+import Deleteuser from "@/components/deleteuser";
 import Link from "next/link";
 
 async function gettingUsers(){
@@ -14,7 +15,11 @@ export default async function page() {
         <ul>
             {
                 usersData.map((user,index)=>(
-                    <li key={index}><Link href={`createdapidisplay/${user.id}`}>{user.name}</Link></li>
+                    <div  style={{margin:"30px"}} key={index}>
+                    <span style={{marginRight:"30px"}}><Link href={`createdapidisplay/${user.id}`}>{user.name}</Link></span>
+                    <span style={{marginRight:"30px"}}><Link href={`createdapidisplay/${user.id}/update`}>Update User Details</Link></span>
+                    <Deleteuser id={user.id} />
+                    </div>
                 ))
             }
         </ul>
